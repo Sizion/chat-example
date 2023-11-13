@@ -38,6 +38,9 @@ public class ClientHandler {
                             if(message.equals("/exit")) {
                                 break;
                             }
+                            if(message.equals("/w")) {
+                                server.whisper(message);
+                            }
                         }
                         server.broadcastMessage(message);
                     }

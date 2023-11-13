@@ -39,6 +39,16 @@ public class Server {
         }
     }
 
+    public void whisper(String message) {
+
+        String[] mes = message.split(" ");
+        for (ClientHandler client : clients) {
+            if (client.getUsername().contains(mes[1]) ) {
+                client.sendMessage(message);
+            }
+        }
+    }
+
     public void unsubscribe(ClientHandler clientHandler) {
         clients.remove(clientHandler);
         broadcastMessage("Клиент: " + clientHandler.getUsername() + " вышел из чата");
