@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.List;
 
 public class ClientHandler {
     private Socket socket;
@@ -26,32 +27,88 @@ public class ClientHandler {
         in = new DataInputStream(socket.getInputStream());
         out = new DataOutputStream(socket.getOutputStream());
         username = "User" + userCount++;
-        server.subscribe(this);
         new Thread(() -> {
-                try {
-                    while(true) {
-                        // /exit -> disconnect()
-                        // /w user message -> user
+            try {
+                authenticateUser(server);
+                communicateWithUser(server);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } finally {
+                disconnect();
+            }
+        }).start();
+    }
 
-                        String message = in.readUTF();
-                        if(message.startsWith("/")) {
-                            if(message.equals("/exit")) {
-                                break;
-                            }
-                        }
-                        server.broadcastMessage(message);
+    private void authenticateUser(Server server) throws IOException {
+        boolean isAuthenticated = false;
+        while (!isAuthenticated) {
+            String message = in.readUTF();
+//            /auth login password
+//            /register login nick password
+            String[] args = message.split(" ");
+            String command = args[0];
+            switch (command) {
+                case "/auth": {
+                    String login = args[1];
+                    String password = args[2];
+                    String username = server.getAuthenticationProvider().getUsernameByLoginAndPassword(login, password);
+                    if (username == null || username.isBlank()) {
+                        sendMessage("Указан неверный логин/пароль");
+                    } else {
+                        this.username = username;
+                        sendMessage(username + ", добро пожаловать в чат!");
+                        server.subscribe(this);
+                        isAuthenticated = true;
                     }
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                } finally {
-                    disconnect();
+                    break;
                 }
-            }).start();
+                case "/register": {
+                    String login = args[1];
+                    String nick = args[2];
+                    String password = args[3];
+                    boolean isRegistred = server.getAuthenticationProvider().register(login, password, nick);
+                    if (!isRegistred) {
+                        sendMessage("Указанный логин/никнейм уже заняты");
+                    } else {
+                        this.username = nick;
+                        sendMessage(nick + ", добро пожаловать в чат!");
+                        server.subscribe(this);
+                        isAuthenticated = true;
+                    }
+                    break;
+                }
+                default: {
+                    sendMessage("Авторизуйтесь сперва");
+                }
+            }
+        }
+    }
+
+    private void communicateWithUser(Server server) throws IOException {
+        while (true) {
+            // /exit -> disconnect()
+            // /w user message -> user
+
+            String message = in.readUTF();
+            if (message.startsWith("/")) {
+                if (message.equals("/exit")) {
+                    break;
+                } else if (message.equals("/list")) {
+                    List<String> userList = server.getUserList();
+                    String joinedUsers =
+                            String.join(", ", userList);
+//                            userList.stream().collect(Collectors.joining(","));
+                    sendMessage(joinedUsers);
+                }
+            } else {
+                server.broadcastMessage("Server: " + message);
+            }
+        }
     }
 
     public void disconnect() {
         server.unsubscribe(this);
-        if(socket != null) {
+        if (socket != null) {
             try {
                 socket.close();
             } catch (IOException e) {
