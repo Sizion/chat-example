@@ -82,12 +82,14 @@ public class ClientHandler {
                 }
             }
         }
+
     }
 
     private void communicateWithUser(Server server) throws IOException {
         while (true) {
             // /exit -> disconnect()
             // /w user message -> user
+            // /kick username
 
             String message = in.readUTF();
             if (message.startsWith("/")) {
@@ -99,6 +101,11 @@ public class ClientHandler {
                             String.join(", ", userList);
 //                            userList.stream().collect(Collectors.joining(","));
                     sendMessage(joinedUsers);
+                } else if (message.startsWith("/kick") && server.getAuthenticationProvider().isAdmin(username)) {
+                    String[] args = message.split(" ");
+                    System.out.println("Зашли сюда");
+                    server.getAuthenticationProvider().kick(args[1]);
+                    server.kickInTheAss(username);
                 }
             } else {
                 server.broadcastMessage("Server: " + message);

@@ -62,4 +62,23 @@ public class Server {
 //                .map(client -> client.getUsername())
                 .collect(Collectors.toList());
     }
+
+    public void whisper(String message) {
+
+        String[] mes = message.split(" ");
+        for (ClientHandler client : clients) {
+            if (client.getUsername().contains(mes[1]) ) {
+                client.sendMessage(message);
+            }
+        }
+    }
+
+    public synchronized void kickInTheAss (String userName){
+        for (int i = 0; i < clients.size(); i++) {
+            if (clients.get(i).getUsername().equals(userName)){
+                unsubscribe(clients.get(i));
+            }
+        }
+
+    }
 }

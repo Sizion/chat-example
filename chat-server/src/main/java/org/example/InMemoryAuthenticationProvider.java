@@ -28,7 +28,24 @@ public class InMemoryAuthenticationProvider implements AuthenticationProvider {
                 return false;
             }
         }
-        users.add(new User(login, password, username));
+        users.add(new User(login, password, username, Role.ADMIN));
         return true;
     }
+
+    @Override
+    public synchronized void kick(String userName) {
+        users.removeIf(user -> user.getUsername().equals(userName));
+    }
+
+
+    @Override
+    public synchronized boolean isAdmin(String username) {
+        for (User user : users) {
+            if (user.getRole().equals(Role.ADMIN) && user.getUsername().equals(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
