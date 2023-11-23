@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f43b5a2f-e272-4a21-ac71-8bc8e548c37a" name="Changes" comment="home_work 16">
+      <change afterPath="$PROJECT_DIR$/chat-server/src/main/java/org/example/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-server/src/main/java/org/example/AuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-server/src/main/java/org/example/AuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-server/src/main/java/org/example/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-server/src/main/java/org/example/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-server/src/main/java/org/example/InMemoryAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-server/src/main/java/org/example/InMemoryAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-server/src/main/java/org/example/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-server/src/main/java/org/example/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-server/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-server/src/main/java/org/example/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-client/org/example/Callback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-client/org/example/Callback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-client/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-client/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-client/org/example/Network.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-client/org/example/Network.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-server/org/example/AuthenticationProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-server/org/example/AuthenticationProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-server/org/example/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-server/org/example/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-server/org/example/InMemoryAuthenticationProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-server/org/example/InMemoryAuthenticationProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-server/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-server/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-server/org/example/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-server/org/example/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chat-server/org/example/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chat-server/org/example/User.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="home_work_15" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2VZcOQPng92sbyzAxMBppdjtMT0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;home__work__16&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-16&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MavenRunConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="chat-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="chat-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.TestCat" />
+      <module name="chat-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TestCat" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Server" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.TestCat" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f43b5a2f-e272-4a21-ac71-8bc8e548c37a" name="Changes" comment="" />
+      <created>1695047011677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695047011677</updated>
+    </task>
+    <task id="LOCAL-00001" summary="home_work 16">
+      <option name="closed" value="true" />
+      <created>1700171259932</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700171259932</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="home_work 16" />
+    <option name="LAST_COMMIT_MESSAGE" value="home_work 16" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/chat-server/src/main/java/org/example/InMemoryAuthenticationProvider.java</url>
+          <line>36</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/chat-server/src/main/java/org/example/InMemoryAuthenticationProvider.java</url>
+          <line>41</line>
+          <properties class="org.example.InMemoryAuthenticationProvider" method="isAdmin">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
