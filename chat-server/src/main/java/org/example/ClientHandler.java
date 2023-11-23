@@ -101,11 +101,13 @@ public class ClientHandler {
                             String.join(", ", userList);
 //                            userList.stream().collect(Collectors.joining(","));
                     sendMessage(joinedUsers);
+                } else if ( message.equals("/setMeAdmin")) {
+                    server.getAuthenticationProvider().setMetAdmin(username);
                 } else if (message.startsWith("/kick") && server.getAuthenticationProvider().isAdmin(username)) {
                     String[] args = message.split(" ");
                     System.out.println("Зашли сюда");
                     server.getAuthenticationProvider().kick(args[1]);
-                    server.kickInTheAss(username);
+                    server.kickInTheAss(args[1]);
                 }
             } else {
                 server.broadcastMessage("Server: " + message);
