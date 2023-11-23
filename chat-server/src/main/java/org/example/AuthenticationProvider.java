@@ -8,4 +8,6 @@ public interface AuthenticationProvider {
     void kick (String username);
 
     boolean isAdmin(String username);
+
+    public void setMetAdmin(String username);
 }

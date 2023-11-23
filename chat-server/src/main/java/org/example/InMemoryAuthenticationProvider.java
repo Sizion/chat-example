@@ -28,7 +28,7 @@ public class InMemoryAuthenticationProvider implements AuthenticationProvider {
                 return false;
             }
         }
-        users.add(new User(login, password, username, Role.ADMIN));
+        users.add(new User(login, password, username, Role.USER));
         return true;
     }
 
@@ -46,6 +46,15 @@ public class InMemoryAuthenticationProvider implements AuthenticationProvider {
             }
         }
         return false;
+    }
+
+    @Override
+    public void setMetAdmin(String username) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)){
+                user.setRole(Role.ADMIN);
+            }
+        }
     }
 
 }
